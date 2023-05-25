@@ -2675,6 +2675,96 @@ input, select, textarea {
 			-ms-transform: scale(1.05);
 			transform: scale(1.05);
 		}
+		
+/* Object */
+
+	.object {
+		border: 0;
+		display: inline-block;
+		position: relative;
+	}
+
+		.object obj {
+			display: block;
+		}
+
+		.object.left, .object.right {
+			max-width: 40%;
+		}
+
+			.object.left obj, .object.right obj {
+				width: 100%;
+			}
+
+		.object.left {
+			float: left;
+			margin: 0 2rem 2rem 0;
+			top: 0.75rem;
+		}
+
+		.object.right {
+			float: right;
+			margin: 0 0 2rem 2rem;
+			top: 0.75rem;
+		}
+
+		.object.fit {
+			display: block;
+			margin: 2.5rem 0;
+			width: 100%;
+		}
+
+			.object.fit:first-child {
+				margin-top: 0;
+			}
+
+			.object.fit obj {
+				width: 100%;
+			}
+
+		.object.main {
+			display: block;
+			margin: 4rem 0;
+			width: 100%;
+		}
+
+			.object.main:first-child {
+				margin-top: 0;
+			}
+
+			.object.main obj {
+				width: 100%;
+			}
+
+		@media screen and (max-width: 736px) {
+
+			.object.fit {
+				margin: 2rem 0;
+			}
+
+			.object.main {
+				margin: 2rem 0;
+			}
+
+		}
+
+	a.object {
+		overflow: hidden;
+	}
+
+		a.object obj {
+			-moz-transition: -moz-transform 0.2s ease-out;
+			-webkit-transition: -webkit-transform 0.2s ease-out;
+			-ms-transition: -ms-transform 0.2s ease-out;
+			transition: transform 0.2s ease-out;
+		}
+
+		a.object:hover obj {
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);
+		}
 
 /* Actions */
 
@@ -3923,6 +4013,12 @@ input, select, textarea {
 
 				#main > .posts > article .image {
 					max-width: 25rem;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				
+				#main > .posts > article .object {
+					width: 820px;
 					margin-left: auto;
 					margin-right: auto;
 				}
